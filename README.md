@@ -10,3 +10,4 @@
 4. run local database `docker-compose up -d`
 5. start the project `yarn start:dev`
 6. access to `localhost:3000/graphql`
+7. execute the seed __"mutation"__ to fill the local database
