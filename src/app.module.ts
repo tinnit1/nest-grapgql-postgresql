@@ -44,6 +44,9 @@ import { ListItemModule } from './list-item/list-item.module';
       })
     }),
     TypeOrmModule.forRoot({
+      ssl: ( process.env.STATE === 'PROD')
+        ? { rejectUnauthorized: false, sslmode: 'require' }
+        : false as any,
       type: 'postgres',
       host: process.env.DB_HOST,
       port: +process.env.DB_PORT,
