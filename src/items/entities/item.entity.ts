@@ -25,7 +25,7 @@ export class Item {
   // @Column()
   // quantity: number;
 
-  @ManyToOne(() => User, (user) => user.items, { nullable: false, lazy: true })
+  @ManyToOne(() => User, (user) => user.lists, { nullable: false, lazy: true })
   @Index('item_user_id_index')
   @Field(() => User)
   user: User;
